@@ -393,6 +393,8 @@ No physical properties detected!`;
  * @returns {Promise<void>}
  */
 async function activate(context) {
+	vscode.extensions.getExtension('coderfin.logical-properties').activate();
+
 	const diagnosticCollection =
 		vscode.languages.createDiagnosticCollection('logical-properties');
 

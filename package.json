@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD
 	"name": "logical-properties",
 	"version": "0.1.16",
+=======
+  	"name": "logical-properties",
+	"version": "0.1.6",
+>>>>>>> 266ba99 (Fixed activation)
 	"description": "Identify and replace CSS 💪 physical properties with 🧠 logical properties.",
 	"keywords": [
 		"css",
@@ -57,7 +62,28 @@
 	"private": true,
 	"displayName": "🧠 Logical Properties",
 	"activationEvents": [
+<<<<<<< HEAD
 		"onStartupFinished"
+=======
+		"onLanguage:coffeescript",
+		"onLanguage:css",
+		"onLanguage:html",
+		"onLanguage:javascript",
+		"onLanguage:javascriptreact",
+		"onLanguage:less",
+		"onLanguage:markdown",
+		"onLanguage:php",
+		"onLanguage:plaintext",
+		"onLanguage:sass",
+		"onLanguage:scss",
+		"onLanguage:stylus",
+		"onLanguage:typescript",
+		"onLanguage:typescriptreact",
+		"onLanguage:vue",
+		"onLanguage:vue-html",
+		"onLanguage:xml",
+		"onLanguage:xsl"
+>>>>>>> 266ba99 (Fixed activation)
 	],
 	"categories": [
 		"Debuggers",
