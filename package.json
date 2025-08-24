@@ -1,11 +1,6 @@
 {
-<<<<<<< HEAD
-	"name": "logical-properties",
-	"version": "0.1.16",
-=======
   	"name": "logical-properties",
 	"version": "0.1.6",
->>>>>>> 266ba99 (Fixed activation)
 	"description": "Identify and replace CSS 💪 physical properties with 🧠 logical properties.",
 	"keywords": [
 		"css",

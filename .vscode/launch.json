@@ -5,6 +5,92 @@
 {
 	"version": "0.2.0",
 	"configurations": [
+		{"name":"Python Debugger: Current File with Arguments","type":"debugpy","request":"launch","program":"${file}","console":"integratedTerminal","args":"${command:pickArgs}"},
+		
+
+
+		{
+			"args": [
+				"--extensionDevelopmentPath=${workspaceFolder}"
+			],
+			"name": "Launch Extension",
+			"outFiles": [
+				"${workspaceFolder}/out/**/*.js"
+			],
+			"preLaunchTask": "npm",
+			"request": "launch",
+			"type": "extensionHost"
+		},
+		{
+			"name": "PowerShell Launch Script",
+			"type": "PowerShell",
+			"request": "launch",
+			"script": "Enter path or command to execute, for example, ${workspaceFolder}/src/foo.ps1 or Invoke-Pester",
+			"cwd": "${cwd}"
+		},
+		{
+			"name": "PowerShell: Windows PowerShell",
+			"type": "PowerShell",
+			"request": "launch",
+			"sessionName": "Windows PowerShell (x64)"
+		},
+		{
+			"name": "Launch Chrome",
+			"request": "launch",
+			"type": "chrome",
+			"url": "http://localhost:8080",
+			"webRoot": "${workspaceFolder}"
+		},
+		{
+			"name": "Launch Program",
+			"type": "node",
+			"request": "launch",
+			"program": "${workspaceFolder}/app.js",
+			"cwd": "${workspaceFolder}",
+			"console": "integratedTerminal"
+		},
+		{
+			"name": "Attach to Process",
+			"type": "node",
+			"request": "attach",
+			"processId": "${command:PickProcess}",
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"name": "PowerShell Interactive Session",
+			"type": "PowerShell",
+			"request": "launch",
+			"cwd": "${cwd}"
+		},
+		{
+			"name": "(gdb) Bash on Windows Launch",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "${workspaceFolder}/a.exe",
+			"args": [],
+			"stopAtEntry": false,
+			"cwd": "${workspaceFolder}",
+			"environment": [],
+			"externalConsole": false,
+			"pipeTransport": {
+				"debuggerPath": "/usr/bin/gdb",
+				"pipeProgram": "${env:windir}\\system32\\bash.exe",
+				"pipeArgs": ["-c"],
+				"pipeCwd": ""
+			},
+			"setupCommands": [
+				{
+					"description": "Enable pretty-printing for gdb",
+					"text": "-enable-pretty-printing",
+					"ignoreFailures": true
+				},
+				{
+					"description": "Set Disassembly Flavor to Intel",
+					"text": "-gdb-set disassembly-flavor intel",
+					"ignoreFailures": true
+				}
+			]
+		},
 		{
 			"name": "Run Extension",
 			"type": "extensionHost",
@@ -16,6 +102,13 @@
 			"type": "extensionHost",
 			"request": "launch",
 			"args": [
+				"--extensionDevelopmentPath=${workspaceFolder}",
+				"--extensionTestsPath=${workspaceFolder}/test/suite/index"
+			]
+		}
+	]
+}
+}
 				"--extensionDevelopmentPath=${workspaceFolder}",
 				"--extensionTestsPath=${workspaceFolder}/test/suite/index"
 			]
